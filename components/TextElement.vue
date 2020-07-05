@@ -9,7 +9,7 @@
         <button class="bg-blue-500 text-white font-bold text-xl overflow-hidden absolute right-0 rounded-sm" style="top: 50%; margin-top: -12px; width: 24px; height: 24px;" @click="$emit('clicked', '+', size)">+</button>
       </span>
     </div>
-    <div :style="'background: rgba(0,0,0, .1); font-size:'+data[0]+'rem;line-height:'+data[1]+ 'rem;'">This is just some dummy text to show you how font-size and line-height looks together with the specified settings above</div>
+    <div :style="'background: rgba(0,0,0, .05); font-size:'+data[0]+'rem;line-height:'+data[1]+ 'rem;'">This is just some dummy text to show you how font-size and line-height looks together with the specified settings above</div>
   </div>
 </template>
 
