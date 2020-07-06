@@ -13,7 +13,8 @@
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.3.0",
     "@nuxtjs/pwa": "^2.6.0",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue2-smooth-scroll": "^1.4.2"
   },
   "devDependencies": {
     "eslint-config-prettier": "^4.1.0",

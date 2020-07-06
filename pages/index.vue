@@ -7,9 +7,9 @@
     <p class="mx-auto max-w-3xl text-lg text-gray-600 text-center mb-three">This tool will help you create a solid foundation for your <a class="text-gray-700 underline" href="https://tailwindcss.com" aria-label="Check out Tailwind">Tailwind</a> config, where line-height, font-size, padding & margin always will match. Thats all you need to create beautiful vertical rythm in Tailwind, as seen on my personal <a class="text-gray-700 underline" href="https://samuelhorn.com" aria-label="Check out my site">site</a>.</p>
     
     <div class="flex justify-center mb-four">
-      <button class="focus:outline-none focus:bg-brand-dark font-semibold bg-brand-light text-white px-two py-one rounded-full">
+      <a href="#output" v-smooth-scroll class="focus:outline-none focus:bg-brand-dark font-semibold bg-brand-light text-white px-two py-one rounded-full">
         Check the output
-      </button>
+      </a>
     </div>
 
     <div class="flex flex-col items-stretch lg:flex-row p-two lg:px-one rounded-md mb-two bg-gray-900 text-white justify-center">
@@ -23,7 +23,7 @@
       </Control>
       <Control title="Grid size" controls="baseGrid" suffix="px">
         <input type="range" min="4" max="32" step="1" v-model.number="baseGrid" @change="updateFontSize() + updateSpacing()">
-        <input class="outline-none focus:bg-gray-700 rounded-sm bg-gray-800 ml-one text-sm py-quarter px-half font-semibold" type="number" min="4" max="24" step="1" v-model.number="baseGrid" id="baseGrid" @change="updateFontSize() + updateSpacing()">
+        <input class="outline-none focus:bg-gray-700 rounded-sm bg-gray-800 ml-one text-sm py-quarter px-half font-semibold" type="number" min="4" max="32" step="1" v-model.number="baseGrid" id="baseGrid" @change="updateFontSize() + updateSpacing()">
       </Control>
     </div>
 
@@ -39,7 +39,7 @@
       />
     </div>
 
-    <pre class="bg-gray-900 text-white p-two mt-two rounded-md"><code>fontSize: {{outputFontConfig}},<br>spacing: {{outputSpacingConfig}}</code></pre>
+    <pre id="output" class="bg-gray-900 text-white p-two mt-two rounded-md"><code>fontSize: {{outputFontConfig}},<br>spacing: {{outputSpacingConfig}}</code></pre>
     
     <footer class="text-center py-four text-gray-600">
       Made by <a class="text-gray-700 underline" href="https://samuelhorn.com" aria-label="Go to samuelhorn.com">samuelhorn.com</a>
@@ -51,6 +51,9 @@
 <script>
 import Control from '~/components/Control'
 import TextElement from '~/components/TextElement'
+import Vue from 'vue'
+import vueSmoothScroll from 'vue2-smooth-scroll'
+Vue.use(vueSmoothScroll)
 
 export default {
   components: {
@@ -60,7 +63,7 @@ export default {
   data() {
     return {
       fontScale: 1.25,
-      baseGrid: 16,
+      baseGrid: 24,
       baseSize: 16,
       config: {
         fontSize: {
@@ -116,7 +119,7 @@ export default {
     lineHeightSwitch(value, size) {
       if (value === '+') {
         this.config.fontSize[size].splice(1, 1, this.config.fontSize[size][1] + this.baseGrid / 16)
-      } else if (value === '-') {
+      } else if (value === '-' && this.config.fontSize[size][1] > this.baseGrid / 16) {
         this.config.fontSize[size].splice(1, 1, this.config.fontSize[size][1] - this.baseGrid / 16)
       } 
     },
