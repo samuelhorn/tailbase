@@ -1,10 +1,17 @@
 <template>
   <div class="container">
 
-    <p class="mx-auto text-4xl lg:text-5xl max-w-4xl leading-tight text-center mt-six mb-six font-bold">
-      Tailwind config generator for a typygraphic scale with vertical rythm
-    </p>
+    <h1 class="mx-auto text-4xl lg:text-5xl max-w-4xl leading-tight text-center mt-six mb-three font-bold">
+      Tailwind config generator for a typygraphic scale with vertical rythm.
+    </h1>
+    <p class="mx-auto max-w-3xl text-lg text-gray-600 text-center mb-three">This tool will help you create a solid foundation for your <a class="text-gray-700 underline" href="https://tailwindcss.com" aria-label="Check out Tailwind">Tailwind</a> config, where line-height, font-size, padding & margin always will match. Thats all you need to create beautiful vertical rythm in Tailwind, as seen on my personal <a class="text-gray-700 underline" href="https://samuelhorn.com" aria-label="Check out my site">site</a>.</p>
     
+    <div class="flex justify-center mb-four">
+      <button class="focus:outline-none focus:bg-brand-dark font-semibold bg-brand-light text-white px-two py-one rounded-full">
+        Check the output
+      </button>
+    </div>
+
     <div class="flex flex-col items-stretch lg:flex-row p-two lg:px-one rounded-md mb-two bg-gray-900 text-white justify-center">
       <Control title="Base font-size" controls="baseSize" suffix="px">
         <input type="range" min="10" max="24" step="1" v-model.number="baseSize" @change="updateFontSize">
@@ -18,12 +25,6 @@
         <input type="range" min="4" max="32" step="1" v-model.number="baseGrid" @change="updateFontSize() + updateSpacing()">
         <input class="outline-none focus:bg-gray-700 rounded-sm bg-gray-800 ml-one text-sm py-quarter px-half font-semibold" type="number" min="4" max="24" step="1" v-model.number="baseGrid" id="baseGrid" @change="updateFontSize() + updateSpacing()">
       </Control>
-    </div>
-
-    <div class="flex justify-center mb-two">
-      <button class="focus:outline-none focus:bg-brand-dark font-semibold bg-brand-light text-white px-two py-one rounded-full">
-        Go copy output
-      </button>
     </div>
 
     <div class="border px-two -mx-two sm:mx-auto sm:rounded-md" :style="'padding-top: '+(baseGrid*2) / 16+'rem; background: linear-gradient(180deg, white 0rem, white '+((baseGrid / 16) - .0625)+'rem, #e2e8f0 '+((baseGrid / 16) - .0625)+'rem, #e2e8f0 '+baseGrid / 16+'rem, white '+baseGrid / 16+'rem); background-size: '+baseGrid / 16+'rem '+baseGrid / 16+'rem; background-repeat: repeat;'">
@@ -40,8 +41,8 @@
 
     <pre class="bg-gray-900 text-white p-two mt-two rounded-md"><code>fontSize: {{outputFontConfig}},<br>spacing: {{outputSpacingConfig}}</code></pre>
     
-    <footer class="text-center py-four text-gray-500">
-      Made by <a class="text-gray-600 underline" href="https://samuelhorn.com" aria-label="Go to samuelhorn.com">samuelhorn.com</a>
+    <footer class="text-center py-four text-gray-600">
+      Made by <a class="text-gray-700 underline" href="https://samuelhorn.com" aria-label="Go to samuelhorn.com">samuelhorn.com</a>
     </footer>
 
   </div>

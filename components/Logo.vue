@@ -13,6 +13,6 @@
         </linearGradient>
       </defs>
     </svg>
-    <h1 class="text-4xl lg:text-5xl leading-none font-medium">Tailbase</h1>
+    <span class="text-4xl lg:text-5xl leading-none font-medium">Tailbase</span>
   </div>
 </template>
