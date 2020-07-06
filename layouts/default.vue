@@ -1,8 +1,21 @@
 <template>
   <div>
+    <header class="flex items-center justify-center mt-three">
+      <Logo/>
+    </header>
     <nuxt />
   </div>
 </template>
+
+<script>
+import Logo from '~/components/Logo'
+
+export default {
+  components: {
+    Logo
+  }
+}
+</script>
 
 <style>
 html {

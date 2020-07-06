@@ -1,5 +1,10 @@
 // See default config https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 module.exports = {
+  purge: [
+    './pages/**/*.vue',
+    './components/**/*.vue',
+    './layouts/**/*.vue',
+  ],
   theme: {
     fontFamily: {
       sans: ['canada-type-gibson', 'sans-serif']
@@ -21,7 +26,14 @@ module.exports = {
       "twelve": "12rem",
       "sixteen": "16rem"
     },
-    extend: {}
+    extend: {
+      colors: {
+        brand: {
+          light: '#0ED7B5',
+          dark: '#0CAD92'
+        }
+      }
+    }
   },
   variants: {}
 }
