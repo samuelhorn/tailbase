@@ -2,9 +2,9 @@
   <div class="container">
 
     <h1 class="mx-auto text-4xl lg:text-5xl max-w-4xl leading-tight text-center mt-six mb-three font-bold">
-      Tailwind config generator for a typygraphic scale with vertical rythm.
+      Tailwind config generator for a typographic scale with vertical rhythm.
     </h1>
-    <p class="mx-auto max-w-3xl text-lg text-gray-600 text-center mb-three">This tool will help you create a solid foundation for your <a class="text-gray-700 underline" href="https://tailwindcss.com" aria-label="Check out Tailwind">Tailwind</a> config, where line-height, font-size, padding & margin always will match. Thats all you need to create beautiful vertical rythm in Tailwind, as seen on my personal <a class="text-gray-700 underline" href="https://samuelhorn.com" aria-label="Check out my site">site</a>.</p>
+    <p class="mx-auto max-w-3xl text-lg text-gray-600 text-center mb-three">This tool will help you create a solid foundation for your <a class="text-gray-700 underline" href="https://tailwindcss.com" aria-label="Check out Tailwind">Tailwind</a> config, where line-height, font-size, padding & margin always will match. Thats all you need to create beautiful vertical rhythm in Tailwind, as seen on my personal <a class="text-gray-700 underline" href="https://samuelhorn.com" aria-label="Check out my site">site</a>.</p>
     
     <div class="flex justify-center mb-four">
       <a href="#output" v-smooth-scroll class="focus:outline-none focus:bg-brand-dark font-semibold bg-brand-light text-white px-two py-one rounded-full">

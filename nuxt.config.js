@@ -13,14 +13,14 @@ export default {
       // Twitter Card
       {name: 'twitter:card', content: 'summary'},
       {name: 'twitter:title', content: 'Tailbase'},
-      {name: 'twitter:description', content: 'Tailwind config generator for a typygraphic scale with vertical rythm.'},
+      {name: 'twitter:description', content: 'Tailwind config generator for a typographic scale with vertical rhythm.'},
       {name: 'twitter:image', content: 'https://tailbase.samuelhorn.com/summary.png'},
       // Facebook OpenGraph
       {property: 'og:title', content: 'Tailbase'},
       {property: 'og:site_name', content: 'Tailbase'},
       {property: 'og:type', content: 'website'},
       {property: 'og:image', content:  'https://tailbase.samuelhorn.com/summary.png'},
-      {property: 'og:description', content: 'Tailwind config generator for a typygraphic scale with vertical rythm.'}
+      {property: 'og:description', content: 'Tailwind config generator for a typographic scale with vertical rhythm.'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
